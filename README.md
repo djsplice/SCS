@@ -1,7 +1,7 @@
 # Yup -- You've found the STS
 This work is based on the [VzBoT RSCS system](https://grabcad.com/library/rscs-for-vzbot-1). Thank you all for providing all of the CAD drawings and [great videos] for information, inspiration, and acceleration!
 
-![Much STS](https://github.com/djsplice/SCS/assets/img/STS.png)
+![Much STS](./img/STS.png)
 
 ## What's STS?
 It's a system that is meant to cool top layer 3D printed extrusions quickly, so that you can print 3D models faster with better quality.
