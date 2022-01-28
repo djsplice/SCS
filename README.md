@@ -15,7 +15,7 @@ After watching and tuning for these scenarios it became clearer that cooling sol
 
 More science necessary, though I believe cooling time could be calculated for a given material - helpful in determining quality print speed.
 
-### Why try the SCS
+### Why try the SCS?
 **First** I want to mention that the only reason I have this cooling problem is largely due to the [Zero-G Mercury project](https://github.com/ZeroGDesign/Mercury). By converting my heretofore fairly well tuned Ender 5 Pro printing at ~75mm/sec into something more 'moderately dangerous' - currently approaching 350mm/sec and 40mms3 volumetric flow.
 
 After watching the [VzBoT video](https://youtu.be/65FVQ1jArME) on cooling solutions I was convinced to try this myself.
@@ -51,12 +51,18 @@ All printed parts are included in the /STL folder - there are 5 parts:
 
 ### Installation
 1. Connect the Fan Bracket and Fan Extension together using the M3 10mm screws.
-1. Thread the M3 6mm screws that will be used to attach the fan duct, let the screws protude slightly from the top so it's easier to mount the duct later
+1. Thread the M3 6mm screws that will be used to attach the fan duct, let the screws protude slightly from the top so it's easier to mount the duct later. The screws will thread directly into the duct housing - no nuts necessary.
 1. Insert the M3 16mm screws that will be used to mount the system to the underside of the 2020 extrusion, thread the t-nuts
 1. Using roll-in t-nuts will allow you to tilt the duct and get them inserted under the 2020 extrusion
 1. Center the duct so that it's in the middle of your print bed
 1. Once the duct is hanging from the 2020 extrusions, insert the spacers between the the extrusion and the duct mount, and tighten the bolts
-1. Mount the fan and the shroud
+1. Mount the Fan Duct Ouput on top of the Fan Extension.
+3. Mount the fan and the shroud
+
+The base of Fan Duct Output should align with the base of your print bed - the idea is for the air to blow onto the top layer of your print, if it's too high above the bed, it won't be as effective.
+
+You may need to adjust the height of the spacers to acheive optimal alignment for your printer.
+[TODO] Add a few more spacer sizes to acommodate 
 
 ### Klipper gcode macro example
 Configure Klipper to control the fans and expose a Gcode macro so it can be controlled by your slicer.
