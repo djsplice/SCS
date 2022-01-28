@@ -40,13 +40,17 @@ You will neee M3 screws, 2 fans, and the ability to print 15mm overhans clearly 
 * Roll In Spring T-Nuts for mounting the blower to the top 2020 extrusions-  - something like [these](https://8020.net/fasteningmethods/hardware/tnuts/rollin/rollintnutwithballspring.html)
 
 ### Printed Parts
+I recommend using the the following print settings:
+* 3 Perimeters and 4 bottom/top solid layers
+* 40% infill
+
 All printed parts are included in the /STL folder - there are 5 parts:
 
 * [Fan Duct Output - 175mm.stl](./stl/Bed%20Duct%20Output%20-%20175mm.stl)
 * [Fan Extension.stl](./stl/Fan%20Extension.stl)
 * [Fan Bracket.stl](./stl/Fan%20Bracket.stl)
 * [Fan Shroud.stl](./stl/Fan%20Shroud.stl)
-* [Spacers.stl](./stl/Spacers.stl)
+* 2x [Spacers.stl](./stl/Spacers.stl)
 
 
 ### Installation
@@ -97,6 +101,15 @@ gcode:
 In order to automatically turn on the SCS fans at a specific layer height, you need to add some custom `Before Layer Change G-code` section under the 'Printer Settings' in SuperSlicer.
 
 ```
-; Turn on SCS at 3rd layer
-{if layer_num == 2} BED_BLOWER  S=40{endif}
+; Set SCS fans to 40% when you reach the 3rd layer
+{if layer_num == 2} BED_BLOWER S=40{endif}
 ```
+
+## Known Issues
+
+### Fan Duct Outlet
+* Lots of bridging in this print!!  I tried to keep the bridge distance low, around 15mm or so... It's a bummer, but hopefully it's doable. 
+* The current design doesn't provide as much bed coverage as I'd like - air flow is a bit more intense in the center than it is on the outer edges. More experimentation necessary
+
+### Fan Bracket
+* There are only 2 points to connect the fan to the bracket and it isn't as secure as I'd like. I'll probably look to add another mount point and potentially strengthen the hole on the point of the triangle...
