@@ -15,7 +15,7 @@ After watching and tuning for these scenarios it became clearer that cooling sol
 
 More science necessary, though I believe cooling time could be calculated for a given material - helpful in determining quality print speed.
 
-### Why try the STS
+### Why try the SCS
 **First** I want to mention that the only reason I have this cooling problem is largely due to the [Zero-G Mercury project](https://github.com/ZeroGDesign/Mercury). By converting my heretofore fairly well tuned Ender 5 Pro printing at ~75mm/sec into something more 'moderately dangerous' - currently approaching 350mm/sec and 40mms3 volumetric flow.
 
 After watching the [VzBoT video](https://youtu.be/65FVQ1jArME) on cooling solutions I was convinced to try this myself.
@@ -24,7 +24,7 @@ My hypothesis is that by adding additional top layer cooling, you'll be able to 
 
 If you're game, help me evaluate!
 
-## STS Parts, Printing, Installation
+## SCS Parts, Printing, Installation
 All printed files are found in the STL folder, CAD files *soon
 
 You will neee M3 screws, 2 fans, and the ability to print 15mm overhans clearly - you can do it - or your money back!   
