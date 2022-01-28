@@ -1,10 +1,10 @@
-# Yup -- You've found the STS
-This work is based on the [VzBoT RSCS system](https://grabcad.com/library/rscs-for-vzbot-1). Thank you all for providing all of the CAD drawings and [great videos] for information, inspiration, and acceleration!
+# Yup - You've found the STS
+This work is based on the [VzBoT RSCS system](https://grabcad.com/library/rscs-for-vzbot-1). Big thanks to the VzBoT crew for providing all of the CAD drawings and awesome videos for information, inspiration, and acceleration!
 
 ![Much STS](./img/STS.png)
 
 ## What's STS?
-It's a system that is meant to cool top layer 3D printed extrusions quickly, so that you can print 3D models faster with better quality.
+It's a system that's meant to cool top layer 3D printed extrusions quickly, upping the brrrr and the HQ.
 
 ### What's the problem?
 I found that as I tried to print at the higher end of my printers mechanical and extruder capabilities inevitably my print quality would suffer.  Especially challenging were overhangs, even 45 degree outer layers, and models with short layer print times (smaller single parts).
@@ -25,7 +25,9 @@ My hypothesis is that by adding additional top layer cooling, you'll be able to 
 If you're game, help me evaluate!
 
 ## STS Parts, Printing, Installation
-All printed files are found in the STL folder, CAD files *soon    
+All printed files are found in the STL folder, CAD files *soon
+
+You will neee M3 screws, 2 fans, and the ability to print 15mm overhans clearly - you can do it - or your money back!   
 
 ### Hardware
 * 2x 120x35 centrifugal fans - make sure they match the voltage and pin  configuration your board can work with!
@@ -33,12 +35,14 @@ All printed files are found in the STL folder, CAD files *soon
 * Various M3 bolts/nuts - of note: 2x 40mm bolts to affix fan and shroud to mount
 * Roll In Spring T-Nuts for mounting the blower to the top 2020 extusions
 
-
 ### Printed Parts
-All printed parts are included in the /STL folder
+All printed parts are included in the /STL folder - there are 5 parts:
+#### Fan output
+[Bed Duct Output - 175mm.stl](https://github.com/djsplice/SCS/blob/master/stl/Bed%20Duct%20Output%20-%20175mm.stl)
+... more 
 
 ### Klipper configuration
-Gotta create some gcode macros that can control the blowers
+{{}TODO] Gotta create some gcode macros that can control the blowers
 
 ### Klipper gcode macro example:
 
