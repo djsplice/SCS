@@ -66,7 +66,7 @@ All printed parts are included in the /STL folder - there are 5 parts:
 The base of Fan Duct Output should align with the base of your print bed - the idea is for the air to blow onto the top layer of your print, if it's too high above the bed, it won't be as effective.
 
 You may need to adjust the height of the spacers to acheive optimal alignment for your printer.
-[TODO] Add a few more spacer sizes to acommodate 
+[TODO] Add a few more spacer sizes to acommodate
 
 ### Klipper gcode macro example
 Configure Klipper to control the fans and expose a Gcode macro so it can be controlled by your slicer.
@@ -108,8 +108,32 @@ In order to automatically turn on the SCS fans at a specific layer height, you n
 ## Known Issues
 
 ### Fan Duct Outlet
-* Lots of bridging in this print!!  I tried to keep the bridge distance low, around 15mm or so... It's a bummer, but hopefully it's doable. 
+* Lots of bridging in this print!!  I tried to keep the bridge distance low, around 15mm or so... It's a bummer, but hopefully it's doable.
 * The current design doesn't provide as much bed coverage as I'd like - air flow is a bit more intense in the center than it is on the outer edges. More experimentation necessary
 
 ### Fan Bracket
 * There are only 2 points to connect the fan to the bracket and it isn't as secure as I'd like. I'll probably look to add another mount point and potentially strengthen the hole on the point of the triangle...
+
+## Experiments
+Here are some pictures of benchys printed using the same g-code, but with  different cooling solutions.
+
+Slicer configuration
+2 Perimeters, 3 Top/Bottom solid
+.2mm layer height
+18% gyroid infill
+Internal Perimeter Speed 250mm/s - External - 125mm/s
+Max Volumetric Speed 43mm/s
+
+1. Single 5015 Part cooling Fans at 100%
+1. Dual 5015 Part cooling Fans at 100%
+1. Dual 5015 Part cooling fans at 100% plus SCS fans at 100%
+
+My interpretation of these results:
+* Short layer times require increased cooling capacity
+* Certain features (like overhangs) will degrade more than others when cooling isn't sufficient
+* Layer times and cooling requirements are correlated - faster layer times will require more Cooling
+* Prints that have more surface area may have a bit more time to cool before the next layer is applied, however, nozzle based cooling solutions will be less effective because they are only in a position to cool a section for a very short amount of time (as the filament is extruded from the nozzle)
+* Smaller prints can benefit somewhat from increased nozzle based cooling systems because the ducts are likely to cover more surface area of the print for a more sustained period of time. Unfortunately smaller parts will likely have very short layer times and nozzle based cooling will probably not be sufficient   
+
+![Benchy Front View](./img/front-before-after.jpg)
+![Benchy Side View](./img/side-before-after.jpg)
