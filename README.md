@@ -137,3 +137,8 @@ My interpretation of these results:
 
 ![Benchy Front View](./img/front-before-after.jpg)
 ![Benchy Side View](./img/side-before-after.jpg)
+
+### CFD Study
+
+Some data to back up the physical observations (places hand in front of the vents). Looks like most of the air is flowing through the center of the duct, not much is getting to the outside edges...
+![CFD v1 fan duct](./img/cfd-v1.png)
