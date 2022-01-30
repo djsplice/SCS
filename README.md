@@ -1,5 +1,5 @@
 # Super Cooling System
-This work is based on the [VzBoT RSCS system](https://grabcad.com/library/rscs-for-vzbot-1). Big thanks to the VzBoT crew, espcially [Simon Vezina(]https://grabcad.com/simon.vezina-2) for providing all of the CAD drawings and awesome videos for information, inspiration, and acceleration!
+This work is based on the [VzBoT RSCS system](https://grabcad.com/library/rscs-for-vzbot-1). Big thanks to the VzBoT crew, espcially [Simon Vezina](https://grabcad.com/simon.vezina-2) for providing all of the CAD drawings and awesome videos for information, inspiration, and acceleration!
 
 ![Much SCS](./img/SCS.png)
 
