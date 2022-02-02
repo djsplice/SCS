@@ -109,7 +109,6 @@ In order to automatically turn on the SCS fans at a specific layer height, you n
 
 ### Fan Duct Outlet
 * Lots of bridging in this print!!  I tried to keep the bridge distance low, around 15mm or so... It's a bummer, but hopefully it's doable.
-* The current design doesn't provide as much bed coverage as I'd like - air flow is a bit more intense in the center than it is on the outer edges. More experimentation necessary
 
 ### Fan Bracket
 * There are only 2 points to connect the fan to the bracket and it isn't as secure as I'd like. I'll probably look to add another mount point and potentially strengthen the hole on the point of the triangle...
@@ -141,14 +140,18 @@ My interpretation of these results:
 ### CFD Study
 I found a nice [tutorial / overview](https://www.youtube.com/watch?v=Wun9EuVTV0w) from Teaching Tech that showed how to do some Computational Fluid Dynamics simulations using a site called [Simscale](https://www.simscale.com/). I quite literally have no idea if I'm using this tool correctly or not! With that said, it seems to provide some good visualizations of air flow, and reflects the changes I'd expect to see as I refined the CAD model.
 
-Take the data for what it's worth - mostly for the neat visualization of airflow =)
+Here is my [SimScale project](https://www.simscale.com/projects/djsplice/super_cooling_system_v2/), take the data for what it's worth - mostly for the neat visualization of airflow =)
 
 It's been great to be able to make updates to a CAD model like this and run a simulation against the updated model to see if it has the intended effects - all before printing the part! Running the simulations take about an hour, so there's not tons of time savings, however, I do save quite a bit of filament!
 
 #### V2 duct output design
 Made some updates to the duct output in an attempt to better distribute the airflow across the bed, and keep it focused on the top layer of the print. It looks like the bed coverage has improved, perhaps at the cost of some velocity.  All good gains I think.
-![CFD v1 fan duct](./img/cfd-v2.png)
-![CFD v1 fan duct](./img/cfd-front-v2.png)
+
+As much as I enjoy running simulations and updating CAD, I've decided to pause the iteration and get some real world print time under my belt with the current design as published here in GitHub.
+
+![CFD v2 fan duct](./img/cfd-v2.png)
+![CFD v2 fan duct](./img/cfd-front-v2.png)
+![CFD v2 fan duct full plate](./img/cfd-dual-v2.png)
 
 #### V1 duct output design
 Some data to back up the physical observations (places hand in front of the vents). Looks like most of the air is flowing through the center of the duct, not much is getting to the outside edges...
