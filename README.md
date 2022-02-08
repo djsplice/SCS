@@ -27,6 +27,8 @@ If you're game, help me evaluate!
 ## SCS Parts, Printing, Installation
 All printed files are found in the STL folder, CAD files *soon
 
+This design works for the Ender 5 Pro, just fits between the top 2020 extrusion and a 300mm bed. If you have a smaller bed, or the Ender 5 Plus it should fit, though for the plus it may be a bit too far away from the bed, or not provide great part coverage... Drop an issue in Github if you get a chance to test it!
+
 You will neee M3 screws, 2 fans, and the ability to print 15mm overhans clearly - you can do it - or your money back!   
 
 ### Hardware
@@ -95,6 +97,19 @@ gcode:
     {% endif %}
     SET_PIN PIN=Bed-Blower-R VALUE={S}
     SET_PIN PIN=Bed-Blower-L VALUE={S}
+```
+
+#### Klipper Custom M106 Macro
+This macro will set your SCS Fans to the same value your slicer sets the part cooling fans to, making it more dynamic. There are probably some advantages to having an 'always on' static setting, vs a dynamically adjusted setting such as this.
+
+```
+[gcode_macro M106]
+rename_existing: M106.1
+gcode:
+  M106.1 { rawparams }
+  {% set bed_blower_speed = params.S|float * 100/255 %}
+  SET_PIN PIN=Bed-Blower-R VALUE={ bed_blower_speed/100 }
+  SET_PIN PIN=Bed-Blower-L VALUE={ bed_blower_speed/100 }
 ```
 
 ### SuperSlicer custom gcode integration
