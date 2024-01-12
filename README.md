@@ -102,6 +102,44 @@ gcode:
     SET_PIN PIN=Bed-Blower-L VALUE={S}
 ```
 
+Alternatively you can configure ports as `fan_generic`
+
+```
+[fan_generic Bed-Blower-R]
+# BED BLOWER RIGHT
+pin: PD12
+max_power: 1.0
+shutdown_speed: 0
+off_below: 0.0
+kick_start_time: 0.100
+
+[fan_generic Bed-Blower-L]
+# BED BLOWER LEFT
+pin: PD13
+max_power: 1.0
+shutdown_speed: 0
+off_below: 0.0
+kick_start_time: 0.100
+
+[gcode_macro BED_BLOWER]
+gcode:
+    # Use a default fan speed to off - expecting an INT as input
+    {% set S = (params.S)|default(0)|float %}
+    {% if S > 0 %}
+        {% set S = (S/100) %}
+    {% endif %}
+   SET_FAN_SPEED FAN=Bed-Blower-R SPEED={S} 
+   SET_FAN_SPEED FAN=Bed-Blower-L SPEED={S}
+
+[gcode_macro M106]
+rename_existing: M106.1
+gcode:
+  M106.1 { rawparams }
+  {% set bed_blower_speed = params.S|float * 100/255 %}
+  SET_FAN_SPEED FAN=Bed-Blower-R SPEED={ bed_blower_speed/100 }
+  SET_FAN_SPEED FAN=Bed-Blower-L SPEED={ bed_blower_speed/100 }
+```
+
 #### Klipper Custom M106 Macro
 This macro will set your SCS Fans to the same value your slicer sets the part cooling fans to, making it more dynamic. There are probably some advantages to having an 'always on' static setting, vs a dynamically adjusted setting such as this.
 
